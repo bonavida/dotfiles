@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# JetBrains
+.idea/
+
+# npm
+npm-debug.log
+
+# yarn
+yarn-error.log
+
+# VS Code
+.vscode/
+# localhistory
+.history
+
+# git
+*.patch
+
+# eslint
+.eslintcache
+
