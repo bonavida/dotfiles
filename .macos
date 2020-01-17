@@ -16,7 +16,7 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###############################################################################
-# Diego's Customizations                                                       #
+# Diego's Customizations                                                      #
 ###############################################################################
 
 echo "Hello $(whoami)! Let's get you set up."
@@ -33,8 +33,7 @@ echo "Brew installing stuff..."
 # imagemagick: eventually I will need this for something
 # ffmpeg: eventually I'll need this for something
 # tree: really handy for listing out directories in text
-# bat: A cat(1) clone with syntax highlighting and Git integration.
-brew install git libdvdcss imagemagick watchman tree bat
+brew install git libdvdcss imagemagick ffmpeg tree
 
 echo "Installing node (via nvm)"
 curl -L https://git.io/n-install | bash
@@ -47,15 +46,15 @@ echo "node --version: $(node --version)"
 echo "npm --version: $(npm --version)"
 
 echo "Installing a few global npm packages"
-npm install --global serve
+npm install --global serve fkill-cli npm-quick-run create-react-app @vue/cli
 
 echo "Installing apps with brew cask"
-brew cask install alfred google-chrome firefox divvy \
-google-drive-file-stream itsycal visual-studio-code dash \
-bartender screenflow skype workflowy suspicious-package \
-sublime-text vlc discord handbrake betterzip avibrazil-rdm sip \
-qlcolorcode qlmarkdown qlstephen quicklook-json webpquicklook \
-qlvideo spotify focus dropbox front qmoji slack synergy
+brew cask install alfred google-chrome firefox \
+google-drive-file-stream visual-studio-code dash \
+skype workflowy suspicious-package sublime-text \
+vlc discord handbrake betterzip avibrazil-rdm \
+qlcolorcode qlmarkdown qlstephen quicklook-json \
+qlimagesize qlvideo spotify dropbox qmoji slack
 
 ###############################################################################
 # General UI/UX                                                               #
