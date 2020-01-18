@@ -5,20 +5,23 @@ export CLICOLOR=1
 export LSCOLORS=Fafacxdxbxegedabagacad
 
 # PROMPT STUFF
+RED=$(tput setaf 1)
 GREEN=$(tput setaf 2);
 YELLOW=$(tput setaf 3);
+MAGENTA=$(tput setaf 198);
 RESET=$(tput sgr0);
 
 function git_branch {
   # Shows the current branch if in a git repository
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \(\1\)/';
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \[\1\]/';
 }
 
 # Default Prompt
 setCustomPrompt () {
+  DISPLAY_USER_HOST='${MAGENTA}%n%f@${MAGENTA}%m 🚀 '
   DISPLAY_DIR='$(dirs)'
   DISPLAY_BRANCH='$(git_branch)'
-  PROMPT="${YELLOW}${DISPLAY_DIR}${GREEN}${DISPLAY_BRANCH}${RESET}"$'\n'"$ ";
+  PROMPT="${DISPLAY_USER_HOST} ${YELLOW}${DISPLAY_DIR}${GREEN}${DISPLAY_BRANCH}${RESET}"$'\n'">: ";
 }
 
 setCustomPrompt
