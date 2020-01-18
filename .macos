@@ -53,7 +53,7 @@ google-drive-file-stream visual-studio-code dash \
 skype workflowy suspicious-package sublime-text \
 vlc discord handbrake betterzip avibrazil-rdm \
 qlcolorcode qlmarkdown qlstephen quicklook-json \
-qlimagesize qlvideo spotify transmission qmoji slack
+qlimagesize qlvideo spotify transmission qmoji slack postman
 
 echo "Generating an RSA token for GitHub"
 mkdir -p ~/.ssh
