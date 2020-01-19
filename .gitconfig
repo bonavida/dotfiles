@@ -1,0 +1,16 @@
+[user]
+	email = gecko.bona@gmail.com
+	name = Diego Bonavida
+[diff]
+    guitool = kdiff3
+[merge]
+    tool = kdiff3
+    log = true
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	last = reset --soft HEAD~1
+[core]
+    excludesfile = ~/.gitignore_global
