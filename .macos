@@ -55,6 +55,10 @@ vlc discord handbrake betterzip avibrazil-rdm \
 qlcolorcode qlmarkdown qlstephen quicklook-json \
 qlimagesize qlvideo spotify transmission qmoji slack postman
 
+# kdiff3 was removed from Homebrew packages in August 2019
+# but you can still get the formula from the GitHub repo 
+brew cask install https://raw.githubusercontent.com/Homebrew/homebrew-cask/6a96e5ea44803e52a43c0c89242390f75d1581ab/Casks/kdiff3.rb
+
 echo "Generating an RSA token for GitHub"
 mkdir -p ~/.ssh
 touch ~/.ssh/config
